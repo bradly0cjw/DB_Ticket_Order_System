@@ -1,16 +1,29 @@
-# DB_Ticket_Order_System
+# untitled
 
-This repo is ***ENFORCE*** branch protection ruleset  
+This template should help get you started developing with Vue 3 in Vite.
 
-1. You may ***NOT*** directly push to main
-2. You may ***NOT*** push force to main
-3. require pull request before push into main
-4. pull request needs to be reviewed by others
+## Recommended IDE Setup
 
-please create a new branch when edit the code   
-using rebase to avoid inconmming pull conflict  
-remember to check remote branch befor writing new things
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-# Goal
+## Customize configuration
 
-Make every commit in main can build successfully 
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
