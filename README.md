@@ -9,4 +9,8 @@ This repo is ***ENFORCE*** branch protection ruleset
 
 please create a new branch when edit the code   
 using rebase to avoid inconmming pull conflict  
-remember to check remote branch befor writing new things  
+remember to check remote branch befor writing new things
+
+# Goal
+
+Make every commit in main can build successfully 
