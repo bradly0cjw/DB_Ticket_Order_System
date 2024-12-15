@@ -19,8 +19,14 @@ RUN npm run build
 # Use the official Nginx image to serve the app
 FROM nginx:alpine as production-stage
 
+# Set the working directory
+WORKDIR /usr/share/nginx/html
+
 # Copy the built files from the build stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY --from=build-stage /app/dist .
 
 # Copy custom Nginx configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80

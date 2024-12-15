@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      target: build-stage
+    volumes:
+      - .:/app
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  nginx:
+    build:
+      context: .
+      target: production-stage
+    ports:
+      - "80:80"
+    depends_on:
+      - app
