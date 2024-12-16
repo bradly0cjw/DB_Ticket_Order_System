@@ -1,0 +1,16 @@
+name: Call Webhook on Push
+
+on:
+  push:
+    branches:
+      - '**'
+  # Allows you to run this workflows manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  call-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Webhook
+        run: curl -X POST ${{ secrets.CI_WEBHOOK }}
