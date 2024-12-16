@@ -10,6 +10,8 @@ on:
 
 jobs:
   call-webhook:
+    environment:
+      name: Portainer Build
     runs-on: ubuntu-latest
     steps:
       - name: Call Webhook
