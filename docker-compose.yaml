@@ -5,3 +5,9 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "8080:80"
+    networks:
+      - cont_network
+    
+networks:
+  cont_network:
+    external: true
