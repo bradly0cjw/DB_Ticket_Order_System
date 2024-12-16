@@ -1,25 +1,7 @@
 services:
-  app:
-    build:
+  web:
+    build: 
       context: .
-      dockerfile: ./dockerfile
-      target: build-stage
-    volumes:
-      - ./src:/app/src
-      - ./public:/app/public
-      - ./package.json:/app/package.json
-      - ./vite.config.js:/app/vite.config.js
-    command: sh -c "npm install && npm run dev"
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=development
-
-  nginx:
-    build:
-      context: .
-      target: production-stage
+      dockerfile: ./Dockerfile
     ports:
       - "80:80"
-    depends_on:
-      - app
