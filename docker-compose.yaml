@@ -1,18 +1,18 @@
 services:
-  git-clone:
-    image: alpine/git
-    container_name: git-clone
-    volumes:
-      - ./TOS_BE:/usr/src/TOS_BE
-      - ./TOS_FE:/usr/src/TOS_FE
-      - ./TOS_DB:/usr/src/TOS_DB
-    entrypoint: /bin/sh -c 
-      if [ -d /usr/src/TOS_BE/.git ]; then cd /usr/src/TOS_BE && git pull; else git clone https://github.com/bradly0cjw/Ticket_Order_System_FE.git /usr/src/TOS_FE; fi
+  # git-clone:
+  #   image: alpine/git
+  #   container_name: git-clone
+  #   volumes:
+  #     - ./TOS_BE:/usr/src/TOS_BE
+  #     - ./TOS_FE:/usr/src/TOS_FE
+  #     - ./TOS_DB:/usr/src/TOS_DB
+  #   entrypoint: /bin/sh -c 
+  #     if [ -d /usr/src/TOS_BE/.git ]; then cd /usr/src/TOS_BE && git pull; else git clone https://github.com/bradly0cjw/Ticket_Order_System_FE.git /usr/src/TOS_FE; fi
 
 
   web:
     build: 
-      context: ./TOS_FE
+      context: ./Ticket_Order_System_FE
       dockerfile: ./Dockerfile
     ports:
       - "8080:80"
