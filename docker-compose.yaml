@@ -11,6 +11,7 @@ services:
 
 
   web:
+    container_name: tos-fe-web
     build: 
       context: ./Ticket_Order_System_FE
       dockerfile: ./Dockerfile
