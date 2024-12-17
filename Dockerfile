@@ -5,12 +5,12 @@ FROM node:16 as build-stage
 WORKDIR /app
 
 # Clone from the repository
-RUN git clone https://github.com/bradly0cjw/Ticket_Order_System_FE.git \
-    && cp -r Ticket_Order_System_FE/* . \
-    && rm -rf Ticket_Order_System_FE
+# RUN git clone https://github.com/bradly0cjw/Ticket_Order_System_FE.git \
+#     && cp -r Ticket_Order_System_FE/* . \
+#     && rm -rf Ticket_Order_System_FE
 
 # # Copy the package.json and package-lock.json files
-# COPY package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
